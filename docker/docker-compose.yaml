@@ -109,7 +109,9 @@ services:
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-    #  - ./output:/opt/airflow/output
+      - C:/Work/reddit-de-project/.env:/opt/airflow/.env
+    env_file:
+      - .env
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 10s
@@ -129,7 +131,9 @@ services:
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-     # - ./output:/opt/airflow/output
+      - C:/Work/reddit-de-project/.env:/opt/airflow/.env
+    env_file:
+      - .env
     healthcheck:
       test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
       interval: 10s
@@ -156,7 +160,9 @@ services:
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-      #- ./output:/opt/airflow/output
+      - C:/Work/reddit-de-project/.env:/opt/airflow/.env
+    env_file:
+      - .env
     environment:
       <<: *airflow-common-env
       DUMB_INIT_SETSID: "0"

@@ -1,3 +1,6 @@
+.env
 /data/reddit-sa-key.json
 .venv/
-.env
+replacement.txt
+dags/__pycache__/
+docker/logs/
