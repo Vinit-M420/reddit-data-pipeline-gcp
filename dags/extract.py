@@ -8,6 +8,7 @@ def extract_reddit_posts():
     import json
     import os
     import logging
+    
     from dotenv import load_dotenv
     load_dotenv(dotenv_path="/opt/airflow/.env") 
     logging.basicConfig(level=logging.DEBUG)
