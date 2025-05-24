@@ -14,7 +14,7 @@ def upload_to_gcs(bucket_name, source_file, destination_blob, **kwargs):
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(destination_blob)
     blob.upload_from_filename(source_file)
-    print(f"Uploaded {source_file} to gs://{bucket_name}/{destination_blob}")
+    logging.info(f"Uploaded {source_file} to gs://{bucket_name}/{destination_blob}")
 
 
 def loading_to_BigQ():
@@ -30,7 +30,7 @@ def loading_to_BigQ():
         uri, table_id, job_config=job_config
     )
     load_job.result()  # Wait for the job to complete
-    print("Loaded data to BigQuery table:", table_id)
+    logging.info("Loaded data to BigQuery table:", table_id)
     
 
 default_args = {
