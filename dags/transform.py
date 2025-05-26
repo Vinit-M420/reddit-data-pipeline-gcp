@@ -37,7 +37,8 @@ default_args = {
 with DAG (dag_id='reddit_data_transform',
           schedule_interval = '@daily',
           default_args = default_args,
-          catchup= False) as dag:
+          catchup= False,
+          tags=["reddit"]) as dag:
     
     transform_task = PythonOperator(
         task_id='transform_data',

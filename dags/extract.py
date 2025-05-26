@@ -1,7 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def extract_reddit_posts():
     import requests
@@ -54,12 +54,14 @@ def extract_reddit_posts():
 
 default_args = {
     'start_date': datetime(2023, 1, 1),
+    
 }
 
 with DAG (dag_id='reddit_data_extract',
-          schedule_interval = '@daily',
+          schedule_interval = '@daily', #@once
           default_args = default_args,
-          catchup= False) as dag:
+          catchup= False,
+          tags=["reddit"]) as dag:
     
     extract_task = PythonOperator(
         task_id='extract_data',

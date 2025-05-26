@@ -107,6 +107,7 @@ services:
     volumes:
       -  C:/Work/reddit-de-project/dags:/opt/airflow/dags
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
+      -  C:/Work/reddit-de-project/sql:/opt/airflow/sql
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - C:/Work/reddit-de-project/.env:/opt/airflow/.env
@@ -129,6 +130,7 @@ services:
     volumes:
       -  C:/Work/reddit-de-project/dags:/opt/airflow/dags
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
+      -  C:/Work/reddit-de-project/sql:/opt/airflow/sql
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - C:/Work/reddit-de-project/.env:/opt/airflow/.env
@@ -158,6 +160,7 @@ services:
     volumes:
       -  C:/Work/reddit-de-project/dags:/opt/airflow/dags
       -  C:/Work/reddit-de-project/data:/opt/airflow/data
+      -  C:/Work/reddit-de-project/sql:/opt/airflow/sql
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - C:/Work/reddit-de-project/.env:/opt/airflow/.env

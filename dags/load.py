@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 from google.cloud import storage, bigquery
 import logging
@@ -40,7 +41,8 @@ default_args = {
 with DAG (dag_id='reddit_data_load',
           schedule_interval = '@daily',
           default_args = default_args,
-          catchup= False) as dag:
+          catchup= False,
+          tags=["reddit"]) as dag:
     
     load1_task = PythonOperator(
         task_id= 'load_data_to_gcs',
@@ -55,5 +57,11 @@ with DAG (dag_id='reddit_data_load',
         task_id= 'load_data_to_BigQ',
         python_callable= loading_to_BigQ,
 )
+    
+    trigger_analyze = TriggerDagRunOperator(
+    task_id='trigger_analyze_dag',
+    trigger_dag_id='reddit_analyze_data',
+    wait_for_completion=False,
+    )
 
-load1_task >> load2_task
+load1_task >> load2_task >> trigger_analyze
