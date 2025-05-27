@@ -69,6 +69,8 @@ Make a .env file in the root directory and add:
 ``` env
 REDDIT_CLIENT_ID=your_id
 REDDIT_CLIENT_SECRET=your_secret
+API_USERNAME=your_reddit_username
+API_PASSWORD=your_reddit_password
 REDDIT_USER_AGENT=your_agent
 PROJECT_ID=your_gcp_project_id
 DATASET_ID=reddit_dataset
@@ -77,6 +79,16 @@ BUCKET_NAME=reddit-data-yourname
 ```
 
 #### 5. Set Up Google Cloud
+
+  - Download your Google Cloud service account JSON key file with permissions for BigQuery and Cloud Storage.
+
+  - Save the JSON file inside the data/ folder of the project (e.g., data/gcp-credentials.json).
+
+  - Add the following line to your .env file to point to this file:
+      ``` GOOGLE_APPLICATION_CREDENTIALS=./data/gcp-credentials.json ```
+  
+  - This environment variable allows the Google Cloud client libraries to authenticate your API requests automatically.
+
 
   - Enable BigQuery and Cloud Storage APIs
 
