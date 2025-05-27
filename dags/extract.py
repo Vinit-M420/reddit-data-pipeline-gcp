@@ -54,11 +54,11 @@ def extract_reddit_posts():
 
 default_args = {
     'start_date': datetime(2023, 1, 1),
-    
+        
 }
 
 with DAG (dag_id='reddit_data_extract',
-          schedule_interval = '@daily', #@once
+          schedule_interval = '@daily', 
           default_args = default_args,
           catchup= False,
           tags=["reddit"]) as dag:
