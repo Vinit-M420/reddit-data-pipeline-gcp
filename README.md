@@ -40,6 +40,13 @@ This personal project showcases entire data pipeline for Reddit's hottest posts 
 
 ---
 
+### Prerequisites
+
+- Python 3.10+
+- Docker Desktop installed
+- Docker Compose installed
+---
+
 ### Getting Started: Deployment Guide
 
 #### 1. Clone the Repository
@@ -63,7 +70,53 @@ pip install -r requirements.txt
 6) Finish the captcha and create your app
 7) The secret is your secret key for your .env, the client id is under personal use script
 
-#### 4. Create .env File
+
+#### 4. Set Up Google Cloud
+
+  - Make an 'Reddit' Project in your GCP account
+
+  - Download your Google Cloud service account JSON key file with permissions for BigQuery and Cloud Storage.
+
+  - Save the JSON file inside the data/ folder of the project (e.g., data/gcp-credentials.json).
+
+  - Add the following line to your .env file to point to this file:
+      ``` GOOGLE_APPLICATION_CREDENTIALS=./data/gcp-credentials.json ```
+  
+  - This environment variable allows the Google Cloud client libraries to authenticate your API requests automatically.
+
+  - Enable BigQuery and Cloud Storage APIs
+
+  - Create a bucket named reddit-data-yourname
+
+  - Create a BigQuery dataset named reddit_dataset
+
+  - Grant necessary service account permissions (Storage Admin, BigQuery Admin)
+
+#### 6. How to Create a Service Account and get the JSON Key
+
+  - Go to https://console.cloud.google.com/apis/credentials
+
+  - Click the blue "Create Credentials" button and select "Service Account".
+
+  - Enter a name and description for the service account and click Create and Continue.
+
+  - On the next page, assign roles such as:
+
+    - BigQuery Admin
+
+    - Storage Admin
+
+  - Click Done to finish creating the service account.
+
+  - Back in the Credentials tab, find your service account and click on its name.
+
+  - Navigate to the "Keys" tab, click "Add Key" → "Create new key".
+
+  - Choose JSON as the key type and click Create.
+
+  - Your credentials file (.json) will be downloaded—move it to your project's data/ folder.
+
+#### 7. Create .env File in project's root dir 
 Make a .env file in the root directory and add:
 
 ``` env
@@ -78,32 +131,13 @@ TABLE_ID=reddit_data
 BUCKET_NAME=reddit-data-yourname
 ```
 
-#### 5. Set Up Google Cloud
-
-  - Download your Google Cloud service account JSON key file with permissions for BigQuery and Cloud Storage.
-
-  - Save the JSON file inside the data/ folder of the project (e.g., data/gcp-credentials.json).
-
-  - Add the following line to your .env file to point to this file:
-      ``` GOOGLE_APPLICATION_CREDENTIALS=./data/gcp-credentials.json ```
-  
-  - This environment variable allows the Google Cloud client libraries to authenticate your API requests automatically.
-
-
-  - Enable BigQuery and Cloud Storage APIs
-
-  - Create a bucket named reddit-data-yourname
-
-  - Create a BigQuery dataset named reddit_dataset
-
-  - Grant necessary service account permissions (Storage Admin, BigQuery Admin)
-
-#### 6. Launch Airflow
+#### 8. Launch Airflow
 ```bash
 docker-compose up airflow-init
 docker-compose up
 ```
 Then go to localhost:8080 and trigger extract_reddit_dag.
+---
 
 ## Usage
 
@@ -122,4 +156,4 @@ Feel free to fork, open issues, and submit PRs. Please follow the existing code 
 
 ## License
 
-MIT License © Vinit
+MIT License © Vinit M
