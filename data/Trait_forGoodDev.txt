@@ -1,0 +1,92 @@
+Post title : Common traits of a great developer you have worked with? 
+
+Comment: 1. Don’t worry too much about the language and focus more on the problem at hand.
+2. Look and read more of other people’s code so you expand your thought process on how something can be approached.
+3. Code more and seek for feedback often from senior peers!
+4. Don’t give in to the imposter syndrome! It’s a learning process and you learn something everyday. You don’t have to know everything from the start nor be perfect with what you do!
+
+Comment: Almost all of the devs that I look up to / have been mentored by are extremely good at thinking through things. They taught me more about the art of problem solving as opposed to coding and that means understanding that solving problems also mean not having to code at all sometimes.
+We get feature requests sometimes from people and the first thing I've learnt to do now is to validate their requests with data, ask them why they need it and what exactly they plan to do with it and check and verify and see if there is already a way to do that in the system. The idea is to get things done with little effort as possible in the quickest time so you can move on to bigger things.
+In case if it turns out that we do indeed need to write code then they usually think things through and have a very calm and composed manner of thinking and don't jump into the 'shiny object syndrome' of 'lets use mongo db because it scales' but every decision that they take is backed by data and basic common sense and is well documented. You could ask them 'Why did we write this software this way' and they have a real iron clad answer as opposed to 'Lol idk it worked'. I've learned that the wrong response to a bug is 'I have no idea what I did but the bug is fixed now' and that every bug has a reason and to dig deeper and analyze every chunk until I understand it.
+If a document that I've written or a tech talk that I'm giving is too complex to understand then I'm doing a poor job at explaining it or I don't understand it well enough myself. So I write and rewrite things until everyone learns.
+
+Comment: They are very articulate/clear about their design decisions. If come across any error and somehow it gets resolved itself with minor changes, restarting the server etc. They will try to find the root cause.
+
+Comment: From my network, all the great developer had below things in common -
+1. All were damn passionate about their job which was only coding coding coding. None of them ever cared or discussed about CTC/Salary etc.
+2. They never cared of promotions etc to EM roles, Architect roles etc. They just wanted to build great software
+3. They always followed - "Think twice, Code once"
+4. They always had a damn plan what they want now and what they want after 2 years. One person got into Spotify Sweden, One got into Amazon US, another into Uber US. They knew about it and they implemented it well.
+5. None of them liked drinking and smoking. They used to do it occasionaly. (Might not be a valid point 😅)
+6. They were pretty fast thinkers. Damn fast.
+
+Comment: 90% problem solving and 10% coding.
+
+Comment: \- Logical
+\- Not hasty, doesn't jump to conclusions while debugging
+\- Doesn't just make the code work, keeps it clean too
+\- Has good business understanding
+\- Can scrutinize requirements and can also present the product well
+\- Has patience
+\- Ready to ask for help if needed irrespective of ranks (not narcissist or entitled)
+\- Is able to manage personal and professional life well
+\- Understands the limitations and constraints i.e. when to keep pushing and when to give up
+
+Comment: there were not necessarily the smartest(whatever the hell that means, imo smartness is overrated in programming)
+the best ones were
+1. consistent : show up everyday and go about their work without any fuss
+2. focus: not distracted ie stuck in learning tutorial hell rather than solving real life business problems
+3. perseverent: taking boring problems, that noone wants to take, and seeing it through their conclusion, no matter how many days it took
+3. extreme ownership: i own this and know everything about whatever i own
+4. loners: dont want to talk much, dont want to go into useless meeting, socialize, or want to dispense their gyan to ever tom, dck & harry
+
+Comment: I’ve had the privilege of working with some truly inspiring developers, and the qualities that stood out the most were their passion for learning, problem solving skills, and how they approached challenges.
+First off, a great developer is someone who isn’t afraid to dive into something unfamiliar and ask questions when they need help. It’s not about knowing everything, it’s about the ability to learn quickly, adapt, and improve. They always take the time to understand the *why* behind what they’re doing, not just the how.
+Another standout trait is their communication skills. Whether they’re explaining a complex concept or collaborating with other teams, a great developer can break things down in simple, understandable terms. It’s amazing how much easier it makes working together, especially when you have tight deadlines.
+They’re also not afraid to challenge the status quo. If something doesn’t make sense or could be done better, they speak up and suggest improvements. This mindset doesn’t just help them grow, it helps the whole team elevate their work.
+Finally, one thing that I think sets many successful developers apart is their resilience. They keep pushing through setbacks and don’t give up easily, always looking for new ways to solve problems rather than getting discouraged.
+These qualities aren’t just about technical skills but also about attitude and approach. The developers who keep evolving, stay curious, and genuinely enjoy the work they do tend to do well in their careers.
+
+Comment: Always deep questioning. I've seen a 10x dev spend an hour asking how is request.data getting my data?? Then spent an hour chasing a rabbit hole down in the frameworks code. We were comparing whether removing the double serialisation happening between services before serving from external service to customer added an benefits as an optimisation.
+Bro made such cool shit for our caching system I can't.
+
+Comment: Don't jump to a solution without understanding the problem
+
+Comment: When something they wrote breaks, it excites them. They enter a flow state. And rather than blame they ensure it never happens and tells the team how they put necessary revised controls in place.
+
+Comment: vim
+
+Comment: Good context about company roadmap, great technical expertise and vast domain knowledge
+
+Comment: My point would be a very good EQ+ smart pants = 10x dev
+
+Comment: Has patience.
+
+Comment: Common traits of an experienced developer, not great for sure, but better qualified than many or a good developer :
+0. Understand the business needs if you can
+1. Think before you jump into coding
+2. Discuss your approach with others (who are qualified enough, even if they are junior), document the approach/architecture / design for a reference.
+3. Break down your solution into smaller, tangible parts so that it can be throughly tested by you for its intended functionality
+4. Write down the algo steps (remember how they made you write it down before you implemented your bubble sort program in college?) and use it as a reference. You can delete it afterwards.
+5. If modifying existing code, do review the code beforehand to understand the impact (rather no impact) of your changes.
+6. Get code reviewed as much as possible, if it's not a common practice at your workplace
+7. Unit test unit test unit test - check code coverage, focus on the negative flows as well. Don't depend on QA to report issues to fix.
+And - What I preach, but never do - write automated tests to ensure your code functionality can be easily tested. TDD is something I know is useful, but somehow find an excuse to avoid it and postpone writing test code for later which I never do.
+
+Comment: Autism? 😂
+
+Comment: Having a consistent pattern in all the code they write, easier to maintain and add features
+
+Comment: Hmm As cool
+
+Comment: Passion.
+
+Comment: I have worked with some great devs and here is why common traits I have seen:
+1. They are super passionate about coding and computer science in general. Like they know many good coders in 90's who may be have made some groundbreaking research or development.
+2. They do coding for hobby most of the time.
+3. Usually don't use any LLM's and also don't use fancy code editors or editors with many extensions
+4. Their typing speed is fast as it comes from a lot of coding.
+5. They usually read a lot of blogs/ books of top tier people in the industry.
+6. Always their to improve, have a very less ego whatsoever.
+7. Think very thoroughly about the problem and usually have very high learning and memory retention rate.
+
