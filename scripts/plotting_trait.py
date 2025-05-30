@@ -2,15 +2,15 @@ import re
 from collections import Counter
 
 # Loading the trait file
-with open("data/Trait_forGoodDev.txt", "r", encoding="utf-8") as f:
+with open("data/trait_ofgr8dev.txt", "r", encoding="utf-8") as f:
     text = f.read().lower()
 
 # list of key traits
 traits = [
-    "problem solving", "passionate", "communication", "debugging", "ownership",
+    "problem solving", "passionate", "communication", "debugging", "ownership", "domain knowledge",
     "resilience", "teamwork", "consistency", "fast thinker", "documentation",
-    "business understanding", "asking questions", "design decisions",
-    "not giving up", "adaptability", "deep thinking"
+    "business understanding", "asking questions", "design decisions",'learning'
+    "not giving up", "adaptability", "deep thinking" , "articulate", "fast thinkers", "logical"
 ]
 
 # Count occurrences

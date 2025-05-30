@@ -38,7 +38,7 @@ the best ones were
 2. focus: not distracted ie stuck in learning tutorial hell rather than solving real life business problems
 3. perseverent: taking boring problems, that noone wants to take, and seeing it through their conclusion, no matter how many days it took
 3. extreme ownership: i own this and know everything about whatever i own
-4. loners: dont want to talk much, dont want to go into useless meeting, socialize, or want to dispense their gyan to ever tom, dck & harry
+4. loners: dont want to atlk much, dont want to go into useless meeting, socialize, or want to dispense their gyan to ever tom, dck & harry
 
 Comment: I’ve had the privilege of working with some truly inspiring developers, and the qualities that stood out the most were their passion for learning, problem solving skills, and how they approached challenges.
 First off, a great developer is someone who isn’t afraid to dive into something unfamiliar and ask questions when they need help. It’s not about knowing everything, it’s about the ability to learn quickly, adapt, and improve. They always take the time to understand the *why* behind what they’re doing, not just the how.

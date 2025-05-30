@@ -7,10 +7,10 @@ request = requests.get(uri)
 html_content = request.text
 soup = BeautifulSoup(html_content, 'lxml')
 post_title = soup.find('h1').text.strip()
-with open('data/Trait_forGoodDev.txt', 'w', encoding='utf-8') as f:
+with open('data/trait_ofgr8dev.txt', 'w', encoding='utf-8') as f:
     pass  # Just opening in 'w' mode clears the file
 
-with open('data/Trait_forGoodDev.txt', 'a') as f:
+with open('data/trait_ofgr8dev.txt', 'a') as f:
     f.write(f"Post title : {post_title} \n\n")
 
 
@@ -32,7 +32,7 @@ submission = reddit.submission(url=uri)
 submission.comments.replace_more(limit=0)
 
 
-with open('data/Trait_forGoodDev.txt', 'a', encoding='utf-8') as f:
+with open('data/trait_ofgr8dev.txt', 'a', encoding='utf-8') as f:
     for comment in submission.comments[:50]:
         comment_text = comment.body
         

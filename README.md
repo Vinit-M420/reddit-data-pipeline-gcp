@@ -136,7 +136,18 @@ BUCKET_NAME=reddit-data-yourname
 docker-compose up airflow-init
 docker-compose up
 ```
+
 Then go to localhost:8080 and trigger extract_reddit_dag.
+
+---
+
+### Tried Web scraping a Reddit post about Traits Redditor's noticed in Great Developers
+#### Hope I excude qualities of these Developers, one day hehe
+
+- Added scraping script where I used BeautifulSoup4 for post title and PRAW for post comments.
+- Saved the Reddit post's title and comments in txt file in /data dir
+- Tried frequency plotting few repeating skills that were mentioned.
+
 ---
 
 ## Usage
@@ -144,6 +155,8 @@ Then go to localhost:8080 and trigger extract_reddit_dag.
 - Trigger the DAGs via Airflow UI at http://localhost:8080
 - Check logs in the Airflow UI for debugging
 - Processed data is available in BigQuery dataset `reddit_dataset`
+
+![Airflow DAGs](visuals/Airflow%20ui%20dags.png)
 
 ## Contributing
 
